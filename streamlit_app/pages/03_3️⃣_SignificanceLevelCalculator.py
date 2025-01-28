@@ -66,7 +66,7 @@ if test_type == "Z-Test":
             ax.set_title("Z-Test Visualisation")
             ax.set_xlabel("Z-Score")
             ax.set_ylabel("Density")
-            ax.legend()
+            ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
             st.pyplot(fig)
 
         except Exception as e:
@@ -113,7 +113,7 @@ elif test_type == "T-Test":
             ax.set_title("T-Test Visualisation")
             ax.set_xlabel("T-Score")
             ax.set_ylabel("Density")
-            ax.legend()
+            ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
             st.pyplot(fig)
 
         except Exception as e:
@@ -148,7 +148,7 @@ elif test_type == "Chi-Square Test":
             ax.set_title("Chi-Square Test Visualisation")
             ax.set_xlabel("Chi-Square Statistic")
             ax.set_ylabel("Density")
-            ax.legend()
+            ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
             st.pyplot(fig)
 
         except Exception as e:

@@ -72,7 +72,21 @@ streamlit run 00_0️⃣_Info.py
 
 The app will be live at ```http://localhost:8501```
 
-## 🌟 **Future Enhancements**
+## 🎬 **Demo**
+  
+### 01_1️⃣_NormalDistributionGenerator:
+![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+
+### 02_2️⃣_NormalDistributionChecker:
+![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionChecker.gif)
+
+### 03_3️⃣_SignificanceLevelCalculator:
+![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+
+### 04_4️⃣_ConfidenceIntervalCalculator:
+![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+
+## 🔮 **Future Enhancements**
 
 Planned features include:
 
