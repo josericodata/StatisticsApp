@@ -75,16 +75,16 @@ The app will be live at ```http://localhost:8501```
 ## 🎬 **Demo**
   
 ### 01_1️⃣_NormalDistributionGenerator:
-![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+![Normal Distribution Generator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
 
 ### 02_2️⃣_NormalDistributionChecker:
-![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionChecker.gif)
+![Normal Distribution Checker](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionChecker.gif)
 
 ### 03_3️⃣_SignificanceLevelCalculator:
-![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+![Significance Level Calculator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/SignificanceLevelCalculator.gif)
 
 ### 04_4️⃣_ConfidenceIntervalCalculator:
-![NormalDistributionGenerator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/NormalDistributionGenerator.gif)
+![Confidence Interval Calculator](https://raw.githubusercontent.com/josericodata/StatisticsApp/main/streamlit_app/assets/gifs/ConfidenceIntervalCalculator.gif)
 
 ## 🔮 **Future Enhancements**
 
