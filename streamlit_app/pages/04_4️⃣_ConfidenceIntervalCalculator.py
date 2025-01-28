@@ -1,4 +1,3 @@
-# 03_ConfidenceIntervalCalculator.py
 import streamlit as st
 from scipy.stats import norm, t
 import numpy as np
@@ -11,18 +10,11 @@ st.title("Confidence Interval Calculator")
 st.markdown(
     """
     This tool allows you to calculate confidence intervals for means or proportions based on your input data.
-    Confidence intervals provide a range of values that likely contain the population parameter of interest, 
-    meaning we are 'confident' that the true value lies within this range given the specified level of confidence.
-
-    ### How to use:
-    - Enter the relevant statistics (mean, standard deviation, sample size) or proportions (successes and trials).
-    - Choose the desired confidence level.
-    - Input a specific x-axis value or p-value to evaluate its position relative to the confidence interval.
-    - The tool will calculate and display the confidence interval and state whether the given value lies within the interval.
+    Confidence intervals provide a range of values that likely contain the population parameter of interest.
 
     ### What is Alpha (α)?
-    Alpha (α) represents the complement of the confidence level (1 - Confidence Level). For example, a 95% confidence level corresponds to an alpha of 0.05.
-    The alpha value determines the probability of observing a result outside the confidence interval if the null hypothesis is true.
+    Alpha (α) represents the complement of the confidence level (1 - Confidence Level). 
+    A 95% confidence level corresponds to an alpha of 0.05.
     """
 )
 
@@ -30,7 +22,7 @@ st.markdown(
 calc_type = st.selectbox("Select Calculation Type:", ["Mean", "Proportion"])
 
 if calc_type == "Mean":
-    # Input fields for confidence interval for a mean
+    # Input fields
     sample_mean = st.number_input("Enter Sample Mean:", value=0.0)
     sample_std_dev = st.number_input("Enter Sample Standard Deviation:", value=1.0, min_value=0.0, format="%.2f")
     sample_size = st.number_input("Enter Sample Size:", value=30, min_value=1, step=1)
@@ -73,19 +65,23 @@ if calc_type == "Mean":
             ax.axvline(lower_bound, color="red", linestyle="--", label=f"Lower Bound ({lower_bound:.2f})")
             ax.axvline(upper_bound, color="red", linestyle="--", label=f"Upper Bound ({upper_bound:.2f})")
             ax.axvline(sample_mean, color="blue", linestyle="--", label=f"Mean ({sample_mean:.2f})")
-            ax.axvline(x_value, color="purple", linestyle="-", label=f"X-Value ({x_value:.2f})")
+
+            # X-value as a dot
+            ax.scatter([x_value], [norm.pdf(x_value, loc=sample_mean, scale=standard_error)], 
+                       color="purple", s=100, label=f"X-Value ({x_value:.2f})")
+
             ax.fill_between(x, 0, y, where=(x >= lower_bound) & (x <= upper_bound), color="green", alpha=0.2, label="Confidence Interval")
             ax.set_title("Confidence Interval for Mean")
             ax.set_xlabel("Values")
             ax.set_ylabel("Density")
-            ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=1)
+            ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
             st.pyplot(fig)
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
 
 elif calc_type == "Proportion":
-    # Input fields for confidence interval for a proportion
+    # Input fields
     successes = st.number_input("Enter Number of Successes:", value=0, min_value=0, step=1)
     trials = st.number_input("Enter Number of Trials:", value=1, min_value=1, step=1)
     confidence_level = st.slider("Select Confidence Level (%):", 80, 99, 95)
@@ -127,14 +123,17 @@ elif calc_type == "Proportion":
             ax.axvline(lower_bound, color="red", linestyle="--", label=f"Lower Bound ({lower_bound:.2f})")
             ax.axvline(upper_bound, color="red", linestyle="--", label=f"Upper Bound ({upper_bound:.2f})")
             ax.axvline(sample_proportion, color="blue", linestyle="--", label=f"Proportion ({sample_proportion:.2f})")
-            ax.axvline(x_value, color="purple", linestyle="--", label=f"X-Value ({x_value:.2f})")
+
+            # X-value as a dot
+            ax.scatter([x_value], [norm.pdf(x_value, loc=sample_proportion, scale=standard_error)], 
+                       color="purple", s=100, label=f"X-Value ({x_value:.2f})")
+
             ax.fill_between(x, 0, y, where=(x >= lower_bound) & (x <= upper_bound), color="green", alpha=0.2, label="Confidence Interval")
             ax.set_title("Confidence Interval for Proportion")
             ax.set_xlabel("Proportion Values")
             ax.set_ylabel("Density")
-            ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=1)
+            ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
             st.pyplot(fig)
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
-
