@@ -79,7 +79,7 @@ git clone https://github.com/user/StatisticsApp.git
 ```bash
 
 cd StatisticsApp
-
+```
 
 3. Create a virtual environment:
 ```bash
