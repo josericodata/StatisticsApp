@@ -129,7 +129,7 @@ The app will be live at ```http://localhost:8501```
 ### ▶️ Watch the YouTube Tutorial
 
 
-[![Crypto Predictor App in 3 Minutes with Streamlit](https://img.youtube.com/vi/wNk-TJSiR1w/maxresdefault.jpg)](https://www.youtube.com/watch?v=wNk-TJSiR1w "Click to play")
+[![Statistics Calculator with Python & Streamlit Perform Key Statistical Tests Online](https://img.youtube.com/vi/wNk-TJSiR1w/maxresdefault.jpg)](https://www.youtube.com/watch?v=wNk-TJSiR1w "Click to play")
 
 Click the image above or [here](https://www.youtube.com/watch?v=wNk-TJSiR1w) to watch the video on YouTube.
 
